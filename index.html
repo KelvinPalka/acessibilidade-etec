@@ -305,30 +305,33 @@
             ></a>
           </a>
         </div>
-        <form
-          class="form-pesquisa"
-          role="search"
-          method="get"
-          action="https://www.cps.sp.gov.br/"
-        >
-          <input
-            type="search"
-            class="campo-de-busca"
-            placeholder="O que deseja localizar?"
-            value=""
-            name="s"
-          />
-          <button type="submit" class="busca-submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-        <div id="search-mobile__btn" style="display: none">
-          <i class="fas fa-search"></i>
-        </div>
-        <div id="menu-mobile__btn">
-          <i class="fas fa-bars"></i>
-        </div>
+
       </div>
     </header>
+    <nav class="main-navigation">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+          <li><a href="projetos.html" class="nav-link">Projetos</a></li>
+          <li><a href="contato.html" class="nav-link">Contato</a></li>
+          <li><a href="acessibilidade.html" class="nav-link">Acessibilidade</a></li>
+          <li><a href="acessibilidade.html" class="nav-link">Acessibilidade</a></li>
+          <li><a href="acessibilidade.html" class="nav-link">Acessibilidade</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <br><br><br><br>
+    <center><h1> Projeto desenvolvido na ideia de ajudar pessoas com deficiencias nas ETEC's do estado</h1></center>
   </body>
 </html>

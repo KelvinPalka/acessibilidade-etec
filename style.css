@@ -114,3 +114,74 @@ button.busca-submit {
     width: 15%;
     height: 50px;
 }
+/* Estilos básicos */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu de navegação */
+.main-navigation {
+  background-color: #B22222; /* Cor de fundo vermelha */
+  padding: 10px 0; /* Espaçamento superior e inferior */
+}
+
+.container {
+  max-width: 1200px; /* Limita a largura do menu */
+  margin: 0 auto; /* Centraliza o menu */
+  padding: 0 20px; /* Espaçamento lateral */
+}
+
+.nav-list {
+  list-style: none; /* Remove marcas de lista */
+  display: flex; /* Alinha itens em linha */
+  justify-content: space-around; /* Espaço igual entre os itens */
+  flex-wrap: wrap; /* Permite que itens quebrem para a linha seguinte */
+}
+
+.nav-list li {
+  margin: 0 10px; /* Espaçamento horizontal entre os itens */
+}
+
+.nav-link {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-weight: 500; /* Peso da fonte */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+.nav-link:hover {
+  background-color: #8B0000; /* Cor ao passar o mouse (vermelho mais escuro) */
+  color: #FFD700; /* Cor do texto ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column; /* Muda a direção para coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .nav-list li {
+    margin: 5px 0; /* Espaçamento vertical entre os itens em dispositivos pequenos */
+  }
+
+  .nav-link {
+    padding: 10px; /* Reduz o padding */
+    width: 100%; /* Faz com que os links ocupem toda a largura */
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    font-size: 14px; /* Diminui o tamanho da fonte */
+  }
+
+  .main-navigation {
+    padding: 5px 0; /* Reduz o padding para telas menores */
+  }
+}
+
