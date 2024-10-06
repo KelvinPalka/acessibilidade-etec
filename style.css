@@ -185,3 +185,38 @@ body {
   }
 }
 
+#section_c{
+  width:800px;
+  height:400px;
+  background:#F8F8FF;
+  margin:1px auto; 
+  }
+  
+.contato{
+  width:400px;
+  height:300px;
+  margin:5px 5px;
+  float:left;
+  }
+.contato h1{
+  font-size:25px;
+  }
+  
+  .contato textarea{
+    resize: none;
+  }
+  .ancora {
+    float: right;
+    text-decoration: none;
+    padding: 10px 20px; /* Ajusta o padding para dar um tamanho melhor */
+    background-color: #8B0000;
+    color: white; /* Cor do texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    transition: background-color 0.3s, transform 0.2s; /* Efeito de transição */
+  }
+  
+  .ancora:hover {
+    background-color: #8B0000; /* Cor ao passar o mouse */
+    transform: scale(0.9); /* Efeito de aumento ao passar o mouse */
+  }
