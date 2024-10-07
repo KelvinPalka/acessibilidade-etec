@@ -8,6 +8,14 @@ body {
     backgroun: #ffffff;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #F0F0F0;
+}
+
 #cps-header {
     display: flex;
     align-items: center;
