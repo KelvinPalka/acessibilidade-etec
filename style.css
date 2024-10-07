@@ -138,17 +138,63 @@ button.busca-submit {
 }
 
 .main-navigation .nav-list .nav-link {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
-    font-weight: 500;
+    font-weight: 400;
     transition: background-color 0.3s, color 0.3s;
     display: block;
 }
 
 .main-navigation .nav-list .nav-link:hover {
     background-color: #8B0000;
-    color: #FFD700;
+}
+
+/* Estilos do submenu */
+.submenu {
+    display: none;
+    /* Oculta o submenu por padrão */
+    position: absolute;
+    /* Permite que o submenu se sobreponha ao conteúdo */
+    background-color: #ffffff; /* Cor de fundo do submenu */
+    border: none; /* Remove a borda do submenu */
+    z-index: 1000;
+    /* Garante que o submenu fique acima de outros elementos */
+}
+
+li:hover .submenu {
+    display: block;
+    /* Exibe o submenu ao passar o mouse sobre o item pai */
+}
+
+/* Estilos dos itens do submenu */
+.submenu li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* Largura do submenu */
+    list-style: none;
+}
+
+.submenu a {
+    display: block; /* Garante que o link preencha o item */
+    padding: 10px;
+    /* Espaçamento interno */
+    color: #808080;
+    /* Cor do texto */
+    text-decoration: none;
+    /* Remove o sublinhado */
+}
+
+.submenu li:hover a {
+    color: #000000; /* Cor do texto ao passar o mouse */
+}
+
+.cps-historico-itens h3,
+.cps-texto-conteudo p,
+table,
+ul {
+    font-family: Roboto, sans-serif;
 }
 
 #first-content img {
