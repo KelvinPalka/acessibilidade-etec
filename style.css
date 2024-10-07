@@ -5,15 +5,6 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     box-sizing: border-box;
-    backgroun: #ffffff;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: #F0F0F0;
 }
 
 #cps-header {
@@ -221,6 +212,14 @@ ul {
     --dropdown-bg: #F9F9F9;
     --dropdown-text: #333333;
     --dropdown-hover: #E9E9E9;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #F0F0F0;
 }
 
 .accessibility-wrapper {
