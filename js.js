@@ -13,6 +13,9 @@ jQuery(document).ready(function(){
     });
 });
 
+//Fim da função
+
+
 // bglh de deficiente de cor dos óio
 
 function toggleDropdown() {
@@ -48,3 +51,37 @@ if (!event.target.closest(".accessibility-wrapper")) {
     button.classList.remove("active");
 }
 });
+
+// FIM - bglh de deficiente de cor dos óio
+
+
+// Validação do CONTACT.HTML
+
+function validac() {
+
+    var nome = contato.nome.value;
+    var email = contato.email.value;
+    var nota = contato.nota.value;
+
+if (nome == "") {
+    alert("Por favor, Preencha o campo com seu nome!");
+    contato.nome.focus();
+    return false;
+}
+if (email == "") {
+    alert("Preencha o campo com seu email");
+    contato.email.focus();
+    return false;
+}
+if (nota == "") {
+    alert("Preencha o campo com a nota do site por favor!");
+    contato.nota.focus();
+    return false;
+}
+  // Se todas as validações forem válidas, envia os dados do formulário e exibe mensagem sem direcionar tela
+alert("Dados enviados com sucesso!");
+  contato.reset(); //função JS reset campos
+}
+
+//FIM FUNÇÃO
+
