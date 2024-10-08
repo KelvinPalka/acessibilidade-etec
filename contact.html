@@ -37,6 +37,36 @@
   <link rel="stylesheet" type="text/css" href="cps/css/cps-min.css" />
   <link rel="stylesheet" type="text/css" href="cps/css/cps.css" />
   <link rel="stylesheet" href="style.css" />
+  <script language="javascript" type="text/javascript">
+    function validac() { // inicio da função para validar campos, acionada ao clicar o botão enviar
+      var nome = contato.nome.value;
+      var email = contato.email.value;
+      var nota = contato.nota.value;
+
+
+      if (nome == "") {
+        alert('Por favor, Preencha o campo com seu nome!');
+        contato.nome.focus();
+        return false;
+      }
+
+      if (email == "") {
+        alert('Preencha o campo com seu email');
+        contato.email.focus();
+        return false;
+      }
+
+      if (nota == "") {
+        alert('Preencha o campo com a nota do site por favor!');
+        contato.nota.focus();
+        return false;
+      }
+      // Se todas as validações forem válidas, envia os dados do formulário e exibe mensagem sem direcionar tela
+      alert("Dados enviados com sucesso!");
+      contato.reset(); //função JS reset campos
+
+    }//FIM FUNÇÃO
+  </script>
 </head>
 
 <body>
@@ -147,6 +177,7 @@
       </ul>
     </div>
 
+    <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-top-v2.js?vs=3.0"></script>
     <noscript>
       Seu navegador não tem suporte a JavaScript ou está desativado!</noscript>
   </section>
@@ -211,6 +242,42 @@
     </div>
   </div>
 
+  <script>
+    function toggleDropdown() {
+      var dropdown = document.getElementById("colorDropdown");
+      var button = document.getElementById("accessibilityBtn");
+      dropdown.classList.toggle("show");
+      button.classList.toggle("active");
+    }
+
+    function applyFilter(type) {
+      var htmlElement = document.documentElement;
+      var filter = 'none';
+      switch (type) {
+        case 'protanopia':
+          filter = 'url(#protanopia-filter)';
+          break;
+        case 'deuteranopia':
+          filter = 'url(#deuteranopia-filter)';
+          break;
+        case 'tritanopia':
+          filter = 'url(#tritanopia-filter)';
+          break;
+      }
+      htmlElement.style.filter = filter;
+      toggleDropdown();
+    }
+
+    document.addEventListener('click', function (event) {
+      var dropdown = document.getElementById("colorDropdown");
+      var button = document.getElementById("accessibilityBtn");
+      if (!event.target.closest('.accessibility-wrapper')) {
+        dropdown.classList.remove("show");
+        button.classList.remove("active");
+      }
+    });
+  </script>
+
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <filter id="protanopia-filter">
       <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0" />
@@ -223,13 +290,21 @@
     </filter>
   </svg>
 
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
   <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
   <div id="section_c">
     <div class="contato">
       <h1>Fale conosco!</h1>
@@ -413,7 +488,8 @@
                         </li>
                       </ul>
                     </div>
-                    
+
+                    <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-top-v2.js?vs=3.0"></script>
                     <noscript>
                       Seu navegador não tem suporte a JavaScript ou está desativado!</noscript>
                   </section>
@@ -454,6 +530,10 @@
                       <div class="vw-plugin-top-wrapper"></div>
                     </div>
                   </div>
+                  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+                  <script>
+                    new window.VLibras.Widget('https://vlibras.gov.br/app');
+                  </script>
                   <br><br><br><br>
                   <center>
                     <h1> Projeto desenvolvido na ideia de ajudar pessoas com deficiencias nas ETEC's do estado</h1>
@@ -612,19 +692,7 @@
         </div>
       </section>
       <!-- /RODAPÉ GOVERNO -->
-      
-      <!-- Area dos js que n pode ser carregado no externo -->
-            <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-              crossorigin="anonymous"></script>
-      <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-top-v2.js?vs=3.0"></script>
-      <script src="js.js"></script>
-    </div>
-  </div>
+
       <script src="js.js"></script>
     </div>
   </div>
